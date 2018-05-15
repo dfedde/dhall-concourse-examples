@@ -15,4 +15,5 @@ jobs:
         path: sh
         args:
         - -c
-        - echo 'hello world'
+        - "\t\t\t\t\t\t\t echo \"this is a test\"\n\t\t\t\t\t\t\t echo \"i'm going
+          to do a curl\"\n\t\t\t\t\t\t\t curl 'https://api.ipify.org?format=json'\n\t\t\t\t\t\t "
