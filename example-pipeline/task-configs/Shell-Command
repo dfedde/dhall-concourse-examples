@@ -1,8 +1,8 @@
-\(args : { command : Text }) -> 
+\( command : Text ) -> 
 	{ platform = "linux"
 	, image_resource = 
 			{ type   = "docker-image"
 			, source = {repository = "alpine"}
 			}
-	,	run = { path = "sh", args = [ "-c", args.command ] }
+	,	run = { path = "sh", args = [ "-c", command ] }
 	}
