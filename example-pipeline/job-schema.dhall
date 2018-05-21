@@ -1,0 +1,16 @@
+{ name :
+        Text
+    , plan :
+        List
+        { task :
+            Text
+        , config :
+            { platform :
+                Text
+            , image_resource :
+                { type : Text, source : { repository : Text } }
+            , run :
+                { path : Text, args : List Text }
+            }
+        }
+    }

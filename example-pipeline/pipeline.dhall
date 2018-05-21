@@ -7,10 +7,10 @@
 				{ task   = "hello world"
 				,	config = ./task-configs/Shell-Command ''
 							 echo "this is a test"
-							 echo "this is pretty cool isn't"
+							 echo "this is pretty cool isn't it"
 						 ''
 				}
 			]
-		}
+		} : ./job-schema.dhall
 	]
 }
