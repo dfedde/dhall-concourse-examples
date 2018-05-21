@@ -1,6 +1,6 @@
 Dhall and Concourse Example
 ---------------------------
-This is an example of how Dhall can be used to make concourse pipelines easier to read understand and Dry.
+This is an example of how Dhall can be used to make concourse pipelines DRY, and easier to read, and understand.
 
 See [dhall](https://github.com/dhall-lang/dhall-haskell)
 
