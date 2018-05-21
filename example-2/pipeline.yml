@@ -1,0 +1,47 @@
+groups: []
+resources:
+- name: pipeline-samples
+  type: git
+  source:
+    branch: master
+    uri: https://github.com/pivotalservices/concourse-pipeline-samples.git
+- name: every-10-min
+  type: time
+  source:
+    interval: 10m
+resource_types: []
+jobs:
+- name: Run automaticlly
+  plan:
+  - get: pipeline-samples
+    trigger: true
+  - task: do your task here
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: alpine
+      run:
+        path: sh
+        args:
+        - -c
+        - |
+          echo "This job is automatically triggered upon any version change in the resource."
+- name: triggered by time
+  plan:
+  - get: every-10-min
+    trigger: true
+  - task: do your task here
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: alpine
+      run:
+        path: sh
+        args:
+        - -c
+        - |
+          echo "This job is automatically triggered upon any version change in the resource."

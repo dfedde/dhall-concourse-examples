@@ -1,0 +1,9 @@
+#!/bin/bash
+
+dhall-to-yaml --explain < pipeline.dhall > pipeline-tmp.yml
+
+fly format-pipeline -c pipeline-tmp.yml > pipeline.yml
+
+rm pipeline-tmp.yml 
+
+cat pipeline.yml
