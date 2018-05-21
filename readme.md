@@ -20,11 +20,11 @@ See [dhall](https://github.com/dhall-lang/dhall-haskell)
 1. Install ['dhall-to-json'](https://github.com/dhall-lang/dhall-json#quick-start)
 1. Clone this repo `git clone https://github.com/dfedde/dhall-concourse-examples.git && cd dhall-concourse-examples`
 1. Start the concourse instance `docker-compose start -d`
-1. Move into the example pipeline repo `cd example-pipeline`
+1. Move into the example pipeline repo `cd example-1`
 1. Run the compile script `./compile`
 1. Read though outputted yaml
 1. Set your fly target `fly -t local login -c http://127.0.0.1 -n admin`
-1. Set the pipeline `fly -t local set-pipeline -c pipeline.yml -p example-pipeline`
+1. Set the pipeline `fly -t local set-pipeline -c pipeline.yml -p example-1`
 1. Go look at your pipeline on http://127.0.0.1
 
 
